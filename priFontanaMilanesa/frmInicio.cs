@@ -60,5 +60,17 @@ namespace priFontanaMilanesa
             }
 
         }
+
+        private void dgvEmpleados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnTotal.Enabled = false;
+            btnMozoDia.Enabled = false;
+        }
+
+        private void dgvEmpleados_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnTotal.Enabled = false;
+            btnMozoDia.Enabled = false;
+        }
     }
 }
