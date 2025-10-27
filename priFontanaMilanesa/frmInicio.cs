@@ -33,15 +33,14 @@ namespace priFontanaMilanesa
             {
                 for (int c = 1; c < matEmpleados.GetLength(1) + 1; c++)
                 {
-                    if (check == false)
-                    {
-                        try
-                        {
-                            //convertir decimal a bool
 
-                            if (dgvEmpleados.Rows[f].Cells[c].Value != null)
-                            {
-                                decimal dato = Convert.ToDecimal(dgvEmpleados.Rows[f].Cells[c].Value.ToString());
+                    try
+                    {
+                    //convertir decimal a bool
+
+                        if (dgvEmpleados.Rows[f].Cells[c].Value != null)
+                        {
+                            decimal dato = Convert.ToDecimal(dgvEmpleados.Rows[f].Cells[c].Value.ToString());
 
                                 if (dato < 0)
                                 {
@@ -49,19 +48,22 @@ namespace priFontanaMilanesa
                                 }
                                 else
                                 {
-                                    dgvEmpleados.Rows[f].Cells[c].Value = Convert.ToDecimal(dgvEmpleados.Rows[f].Cells[c].Value) / 1;
+                                    dgvEmpleados.Rows[f].Cells[c].Value = Convert.ToDecimal(dgvEmpleados.Rows[f].Cells[c].Value);
                                 }
                             }
                         }
-                        catch (Exception)
-                        {
+                    catch (Exception)
+                     {
                             check = true;
-                        }
-                    }
+                        dgvEmpleados.Rows[f].Cells[c].Value = 0;
+                     }
+
+                    
 
                 }
 
             }
+
             if (check == false)
             {
                 btnTotal.Enabled = true;
@@ -93,7 +95,7 @@ namespace priFontanaMilanesa
             decimal mejor = 0;
             string empleado = "";
             decimal[] vecSuma = new decimal[5];
-            for (int c = 1; c < matEmpleados.GetLength(1); c++)
+            for (int c = 1; c < matEmpleados.GetLength(1) + 1; c++)
             {
                 for (int f = 0; f < matEmpleados.GetLength(0); f++)
                 {
@@ -115,7 +117,7 @@ namespace priFontanaMilanesa
         {
             decimal total = 0;
             decimal[] vecSuma = new decimal[5];
-            for (int c = 1; c < matEmpleados.GetLength(1); c++)
+            for (int c = 1; c < matEmpleados.GetLength(1) + 1; c++)
             {
                 for (int f = 0; f < matEmpleados.GetLength(0); f++)
                 {

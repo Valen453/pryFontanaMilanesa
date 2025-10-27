@@ -47,7 +47,7 @@
             dgvEmpleados.AllowUserToAddRows = false;
             dgvEmpleados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvEmpleados.Columns.AddRange(new DataGridViewColumn[] { clEmpleados, clComidas, clBebidasSH, clBebicasCH, clPostres });
-            dgvEmpleados.Location = new Point(43, 76);
+            dgvEmpleados.Location = new Point(13, 12);
             dgvEmpleados.Name = "dgvEmpleados";
             dgvEmpleados.Size = new Size(544, 154);
             dgvEmpleados.TabIndex = 0;
@@ -87,7 +87,7 @@
             // 
             // btnValidar
             // 
-            btnValidar.Location = new Point(449, 274);
+            btnValidar.Location = new Point(449, 200);
             btnValidar.Name = "btnValidar";
             btnValidar.Size = new Size(108, 23);
             btnValidar.TabIndex = 1;
@@ -98,7 +98,7 @@
             // btnMozoDia
             // 
             btnMozoDia.Enabled = false;
-            btnMozoDia.Location = new Point(258, 274);
+            btnMozoDia.Location = new Point(238, 200);
             btnMozoDia.Name = "btnMozoDia";
             btnMozoDia.Size = new Size(105, 23);
             btnMozoDia.TabIndex = 2;
@@ -109,7 +109,7 @@
             // btnTotal
             // 
             btnTotal.Enabled = false;
-            btnTotal.Location = new Point(43, 274);
+            btnTotal.Location = new Point(13, 200);
             btnTotal.Name = "btnTotal";
             btnTotal.Size = new Size(108, 23);
             btnTotal.TabIndex = 3;
@@ -120,7 +120,7 @@
             // lblMejorEmpleados
             // 
             lblMejorEmpleados.AutoSize = true;
-            lblMejorEmpleados.Location = new Point(258, 339);
+            lblMejorEmpleados.Location = new Point(238, 263);
             lblMejorEmpleados.Name = "lblMejorEmpleados";
             lblMejorEmpleados.Size = new Size(32, 15);
             lblMejorEmpleados.TabIndex = 4;
@@ -129,7 +129,7 @@
             // lblTotal
             // 
             lblTotal.AutoSize = true;
-            lblTotal.Location = new Point(43, 339);
+            lblTotal.Location = new Point(13, 263);
             lblTotal.Name = "lblTotal";
             lblTotal.Size = new Size(27, 15);
             lblTotal.TabIndex = 5;
@@ -139,7 +139,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(631, 475);
+            ClientSize = new Size(631, 306);
             Controls.Add(lblTotal);
             Controls.Add(lblMejorEmpleados);
             Controls.Add(btnTotal);
@@ -147,7 +147,7 @@
             Controls.Add(btnValidar);
             Controls.Add(dgvEmpleados);
             Name = "frmInicio";
-            Text = "Form1";
+            Text = "Empleados";
             Load += frmInicio_Load;
             ((System.ComponentModel.ISupportInitialize)dgvEmpleados).EndInit();
             ResumeLayout(false);
