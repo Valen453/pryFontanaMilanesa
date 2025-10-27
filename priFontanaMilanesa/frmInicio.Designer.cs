@@ -134,19 +134,23 @@
             lblTotal.Size = new Size(27, 15);
             lblTotal.TabIndex = 5;
             lblTotal.Text = "____";
+            lblTotal.Click += lblTotal_Click;
             // 
             // frmInicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(631, 306);
+            ClientSize = new Size(584, 311);
             Controls.Add(lblTotal);
             Controls.Add(lblMejorEmpleados);
             Controls.Add(btnTotal);
             Controls.Add(btnMozoDia);
             Controls.Add(btnValidar);
             Controls.Add(dgvEmpleados);
+            MaximumSize = new Size(600, 350);
+            MinimumSize = new Size(600, 350);
             Name = "frmInicio";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Empleados";
             Load += frmInicio_Load;
             ((System.ComponentModel.ISupportInitialize)dgvEmpleados).EndInit();

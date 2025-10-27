@@ -36,29 +36,29 @@ namespace priFontanaMilanesa
 
                     try
                     {
-                    //convertir decimal a bool
+                        //convertir decimal a bool
 
                         if (dgvEmpleados.Rows[f].Cells[c].Value != null)
                         {
                             decimal dato = Convert.ToDecimal(dgvEmpleados.Rows[f].Cells[c].Value.ToString());
 
-                                if (dato < 0)
-                                {
-                                    dgvEmpleados.Rows[f].Cells[c].Value = 0;
-                                }
-                                else
-                                {
-                                    dgvEmpleados.Rows[f].Cells[c].Value = Convert.ToDecimal(dgvEmpleados.Rows[f].Cells[c].Value);
-                                }
+                            if (dato < 0)
+                            {
+                                dgvEmpleados.Rows[f].Cells[c].Value = 0;
+                            }
+                            else
+                            {
+                                dgvEmpleados.Rows[f].Cells[c].Value = Convert.ToDecimal(dgvEmpleados.Rows[f].Cells[c].Value);
                             }
                         }
+                    }
                     catch (Exception)
-                     {
-                            check = true;
+                    {
+                        check = true;
                         dgvEmpleados.Rows[f].Cells[c].Value = 0;
-                     }
+                    }
 
-                    
+
 
                 }
 
@@ -126,6 +126,11 @@ namespace priFontanaMilanesa
             }
 
             lblTotal.Text = Convert.ToString(total);
+        }
+
+        private void lblTotal_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
