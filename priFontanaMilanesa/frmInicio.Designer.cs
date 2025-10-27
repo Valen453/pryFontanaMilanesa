@@ -37,6 +37,8 @@
             btnValidar = new Button();
             btnMozoDia = new Button();
             btnTotal = new Button();
+            lblMejorEmpleados = new Label();
+            lblTotal = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvEmpleados).BeginInit();
             SuspendLayout();
             // 
@@ -85,7 +87,7 @@
             // 
             // btnValidar
             // 
-            btnValidar.Location = new Point(479, 373);
+            btnValidar.Location = new Point(449, 274);
             btnValidar.Name = "btnValidar";
             btnValidar.Size = new Size(108, 23);
             btnValidar.TabIndex = 1;
@@ -96,28 +98,50 @@
             // btnMozoDia
             // 
             btnMozoDia.Enabled = false;
-            btnMozoDia.Location = new Point(283, 373);
+            btnMozoDia.Location = new Point(258, 274);
             btnMozoDia.Name = "btnMozoDia";
             btnMozoDia.Size = new Size(105, 23);
             btnMozoDia.TabIndex = 2;
             btnMozoDia.Text = "Mozo del Día";
             btnMozoDia.UseVisualStyleBackColor = true;
+            btnMozoDia.Click += btnMozoDia_Click;
             // 
             // btnTotal
             // 
             btnTotal.Enabled = false;
-            btnTotal.Location = new Point(43, 373);
+            btnTotal.Location = new Point(43, 274);
             btnTotal.Name = "btnTotal";
             btnTotal.Size = new Size(108, 23);
             btnTotal.TabIndex = 3;
             btnTotal.Text = "Calcular Total";
             btnTotal.UseVisualStyleBackColor = true;
+            btnTotal.Click += btnTotal_Click;
+            // 
+            // lblMejorEmpleados
+            // 
+            lblMejorEmpleados.AutoSize = true;
+            lblMejorEmpleados.Location = new Point(258, 339);
+            lblMejorEmpleados.Name = "lblMejorEmpleados";
+            lblMejorEmpleados.Size = new Size(32, 15);
+            lblMejorEmpleados.TabIndex = 4;
+            lblMejorEmpleados.Text = "_____";
+            // 
+            // lblTotal
+            // 
+            lblTotal.AutoSize = true;
+            lblTotal.Location = new Point(43, 339);
+            lblTotal.Name = "lblTotal";
+            lblTotal.Size = new Size(27, 15);
+            lblTotal.TabIndex = 5;
+            lblTotal.Text = "____";
             // 
             // frmInicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(631, 475);
+            Controls.Add(lblTotal);
+            Controls.Add(lblMejorEmpleados);
             Controls.Add(btnTotal);
             Controls.Add(btnMozoDia);
             Controls.Add(btnValidar);
@@ -127,6 +151,7 @@
             Load += frmInicio_Load;
             ((System.ComponentModel.ISupportInitialize)dgvEmpleados).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -140,5 +165,7 @@
         private Button btnValidar;
         private Button btnMozoDia;
         private Button btnTotal;
+        private Label lblMejorEmpleados;
+        private Label lblTotal;
     }
 }
