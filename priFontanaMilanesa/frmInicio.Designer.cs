@@ -89,9 +89,11 @@
             btnValidar.TabIndex = 1;
             btnValidar.Text = "Validar Datos";
             btnValidar.UseVisualStyleBackColor = true;
+            btnValidar.Click += btnValidar_Click;
             // 
             // btnMozoDia
             // 
+            btnMozoDia.Enabled = false;
             btnMozoDia.Location = new Point(283, 373);
             btnMozoDia.Name = "btnMozoDia";
             btnMozoDia.Size = new Size(105, 23);
@@ -101,6 +103,7 @@
             // 
             // btnTotal
             // 
+            btnTotal.Enabled = false;
             btnTotal.Location = new Point(43, 373);
             btnTotal.Name = "btnTotal";
             btnTotal.Size = new Size(108, 23);

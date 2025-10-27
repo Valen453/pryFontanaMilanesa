@@ -24,5 +24,41 @@ namespace priFontanaMilanesa
                 dgvEmpleados.Rows.Add(matEmpleados[f, 0]);
             }
         }
+
+        private void btnValidar_Click(object sender, EventArgs e)
+        {
+            var check = false;
+            for (int f = 0; f < matEmpleados.GetLength(0); f++)
+            {
+                for (int c = 1; c < matEmpleados.GetLength(1); c++)
+                {
+                    if (check == false)
+                    {
+                        try
+                        {
+                            Convert.ToDecimal(dgvEmpleados.Rows[f].Cells[c].Value);
+                        }
+                        catch (Exception)
+                        {
+                            check = true;
+                        }
+                    }
+
+                }
+
+            }
+            if (check == false)
+            {
+                btnTotal.Enabled = true;
+                btnMozoDia.Enabled = true;
+            }
+            else
+            {
+                btnTotal.Enabled = false;
+                btnMozoDia.Enabled = false;
+                MessageBox.Show("Solo se permiten valores numericos en la tabla");
+            }
+
+        }
     }
 }
