@@ -34,6 +34,9 @@
             clBebidasSH = new DataGridViewTextBoxColumn();
             clBebicasCH = new DataGridViewTextBoxColumn();
             clPostres = new DataGridViewTextBoxColumn();
+            btnValidar = new Button();
+            btnMozoDia = new Button();
+            btnTotal = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvEmpleados).BeginInit();
             SuspendLayout();
             // 
@@ -78,11 +81,41 @@
             clPostres.HeaderText = "Postres";
             clPostres.Name = "clPostres";
             // 
+            // btnValidar
+            // 
+            btnValidar.Location = new Point(479, 373);
+            btnValidar.Name = "btnValidar";
+            btnValidar.Size = new Size(108, 23);
+            btnValidar.TabIndex = 1;
+            btnValidar.Text = "Validar Datos";
+            btnValidar.UseVisualStyleBackColor = true;
+            // 
+            // btnMozoDia
+            // 
+            btnMozoDia.Location = new Point(283, 373);
+            btnMozoDia.Name = "btnMozoDia";
+            btnMozoDia.Size = new Size(105, 23);
+            btnMozoDia.TabIndex = 2;
+            btnMozoDia.Text = "Mozo del Día";
+            btnMozoDia.UseVisualStyleBackColor = true;
+            // 
+            // btnTotal
+            // 
+            btnTotal.Location = new Point(43, 373);
+            btnTotal.Name = "btnTotal";
+            btnTotal.Size = new Size(108, 23);
+            btnTotal.TabIndex = 3;
+            btnTotal.Text = "Calcular Total";
+            btnTotal.UseVisualStyleBackColor = true;
+            // 
             // frmInicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(631, 475);
+            Controls.Add(btnTotal);
+            Controls.Add(btnMozoDia);
+            Controls.Add(btnValidar);
             Controls.Add(dgvEmpleados);
             Name = "frmInicio";
             Text = "Form1";
@@ -99,5 +132,8 @@
         private DataGridViewTextBoxColumn clBebidasSH;
         private DataGridViewTextBoxColumn clBebicasCH;
         private DataGridViewTextBoxColumn clPostres;
+        private Button btnValidar;
+        private Button btnMozoDia;
+        private Button btnTotal;
     }
 }
